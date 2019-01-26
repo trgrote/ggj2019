@@ -23,22 +23,8 @@ public class DadController : MonoBehaviour
 
   private void Rotation()
   {
-    Vector2 rotationInput = new Vector2(Input.GetAxisRaw("Right Stick Horizontal"), Input.GetAxisRaw("Right Stick Vertical"));
-    if (rotationInput.sqrMagnitude > 0.0f)
-    {
-      float rotationAngle = Vector2.SignedAngle(Vector2.right, rotationInput);
-      Quaternion start = rb.rotation;
-      Quaternion end = Quaternion.AngleAxis(rotationAngle + 180.0f, Vector3.up);
-      rb.MoveRotation(Quaternion.Slerp(start, end, rotationFactor));
-      // transform.rotation = Quaternion.Slerp(start, end, rotationFactor);
-      // transform.rotation = Quaternion.AngleAxis(rotationAngle + 180.0f, Vector3.up);
-    }
-  }
-
-  private void Movement()
-  {
-    float inputH = Input.GetAxis("Horizontal");
-    float inputV = Input.GetAxis("Vertical");
+    float inputH = Input.GetAxisRaw("Right Stick Horizontal");
+    float inputV = Input.GetAxisRaw("Right Stick Vertical");
 
     var horizAxis = Camera.main.transform.right;
     var vertAxis = Camera.main.transform.forward;
@@ -48,7 +34,32 @@ public class DadController : MonoBehaviour
     horizAxis.Normalize();
     vertAxis.Normalize();
 
-    // Get Direction (should still be normalized)    
+    // Get Direction  
+    var rotationInput = horizAxis * inputH + vertAxis * inputV;
+    
+    if (rotationInput.sqrMagnitude > 0.0f)
+    {
+      float rotationAngle = Vector3.SignedAngle(Vector3.forward, rotationInput, Vector3.up);
+      Quaternion start = rb.rotation;
+      Quaternion end = Quaternion.AngleAxis(rotationAngle, Vector3.up);
+      rb.MoveRotation(Quaternion.Slerp(start, end, rotationFactor));
+    }
+  }
+
+  private void Movement()
+  {
+    float inputH = Input.GetAxis("Horizontal");
+    float inputV = Input.GetAxis("Vertical");
+
+    var horizAxis = Camera.main.transform.right;
+    var vertAxis = Camera.main.transform.forward;  // actualy z-axis
+
+    // fuck y and then normalize
+    horizAxis.y = vertAxis.y = 0;
+    horizAxis.Normalize();
+    vertAxis.Normalize();
+
+    // Get Direction
     var moveDirection = horizAxis * inputH + vertAxis * inputV;
     
     rb.velocity = moveDirection * movementSpeed;

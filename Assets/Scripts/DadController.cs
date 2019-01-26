@@ -15,7 +15,7 @@ public class DadController : MonoBehaviour
     rb = GetComponent<Rigidbody>();
   }
 
-  void Update()
+  void FixedUpdate()
   {
     Movement();
     Rotation();
@@ -39,11 +39,19 @@ public class DadController : MonoBehaviour
   {
     float inputH = Input.GetAxis("Horizontal");
     float inputV = Input.GetAxis("Vertical");
-    rb.velocity = new Vector3(
-        inputH * movementSpeed,
-        0,
-        inputV * movementSpeed
-    );
+
+    var horizAxis = Camera.main.transform.right;
+    var vertAxis = Camera.main.transform.forward;
+
+    // fuck y and then normalize
+    horizAxis.y = vertAxis.y = 0;
+    horizAxis.Normalize();
+    vertAxis.Normalize();
+
+    // Get Direction (should still be normalized)    
+    var moveDirection = horizAxis * inputH + vertAxis * inputV;
+    
+    rb.velocity = moveDirection * movementSpeed;
 
     // rb.AddForce(movement, ForceMode.VelocityChange);
   }

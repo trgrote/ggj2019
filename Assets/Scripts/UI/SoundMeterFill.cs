@@ -14,22 +14,8 @@ public class SoundMeterFill : MonoBehaviour
         _image = GetComponent<Image>();
     }
 
-    void OnEnable()
+    void Update()
     {
-        StartCoroutine(nameof(FillErUp));
-    }
-
-    void OnDisable()
-    {
-        StopCoroutine(nameof(FillErUp));
-    }
-
-    IEnumerator FillErUp()
-    {
-        while (true)
-        {
-            _image.fillAmount = SoundMeterGlobals.SoundValue;
-            yield return null;
-        }
+        _image.fillAmount = SoundMeterGlobals.SoundValue;
     }
 }

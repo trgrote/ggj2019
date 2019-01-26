@@ -8,6 +8,6 @@ using rho;
 // Consumed by the Sound Manager and Audio Spawner
 public class ObjectBrokenEvent : IGameEvent
 {
-    public AudioClip AudioToPlay;
     public float SoundAmount;
+    public AudioClip SoundEffect;
 }

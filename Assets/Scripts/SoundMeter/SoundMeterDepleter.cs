@@ -10,9 +10,9 @@ public class SoundMeterDepleter : MonoBehaviour
 
     void Update()
     {
-        SoundMeterGlobals.SoundValue = Mathf.Max(
+        GlobalValues.SoundValue = Mathf.Max(
             0f,
-            SoundMeterGlobals.SoundValue -= _depleteRate * Time.deltaTime
+            GlobalValues.SoundValue -= _depleteRate * Time.deltaTime
         );
     }
 }

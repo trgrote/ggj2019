@@ -16,6 +16,6 @@ public class SoundMeterFill : MonoBehaviour
 
     void Update()
     {
-        _image.fillAmount = SoundMeterGlobals.SoundValue;
+        _image.fillAmount = GlobalValues.SoundValue;
     }
 }

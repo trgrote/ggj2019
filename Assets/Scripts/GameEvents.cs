@@ -11,3 +11,8 @@ public class ObjectBrokenEvent : IGameEvent
     public float SoundAmount;
     public AudioClip SoundEffect;
 }
+
+public class StateChangedEvent : IGameEvent
+{
+    public GameStateManager.State State;
+}

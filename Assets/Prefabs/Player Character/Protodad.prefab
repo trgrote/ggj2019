@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5454887063870317232}
   - component: {fileID: 5454887063870317233}
   - component: {fileID: 5454887063870317238}
+  - component: {fileID: 827674019}
   m_Layer: 0
   m_Name: Protodad
   m_TagString: Untagged
@@ -93,6 +94,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &827674019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5454887063870317239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33273fa130e270247a62927f108fc1ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  rotationFactor: 0.5
 --- !u!1 &5454887064432371775
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 5454887064432371775}
   m_LocalRotation: {x: -0, y: -0, z: 0.7064218, w: 0.70779115}
   m_LocalPosition: {x: 0, y: -0.09, z: 0.459}
-  m_LocalScale: {x: 2.456149, y: 2.022225, z: 0.21597625}
+  m_LocalScale: {x: 3.5427494, y: 2.9168572, z: 0.31152415}
   m_Children: []
   m_Father: {fileID: 5454887065186462305}
   m_RootOrder: 0
@@ -212,8 +227,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5454887065186462310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.21099997, z: 0.889}
-  m_LocalScale: {x: 0.08984331, y: 0.0879329, z: 1}
+  m_LocalPosition: {x: 0, y: 0.21099997, z: 1.02}
+  m_LocalScale: {x: 0.100992866, y: 0.09884537, z: 1.1241}
   m_Children:
   - {fileID: 5454887064432371774}
   m_Father: {fileID: 5454887063870317235}

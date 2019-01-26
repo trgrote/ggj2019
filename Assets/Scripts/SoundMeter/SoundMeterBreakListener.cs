@@ -22,6 +22,6 @@ public class SoundMeterBreakListener : MonoBehaviour
     void OnObjectBroken(ObjectBrokenEvent evt)
     {
         // Add Value to the Sound Value
-        SoundMeterGlobals.SoundValue += evt.SoundAmount;
+        GlobalValues.SoundValue += evt.SoundAmount;
     }
 }

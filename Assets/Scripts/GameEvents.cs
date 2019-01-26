@@ -16,7 +16,3 @@ public class StateChangedEvent : IGameEvent
 {
     public GameStateManager.State State;
 }
-
-public class TimeRanOut : IGameEvent
-{
-}

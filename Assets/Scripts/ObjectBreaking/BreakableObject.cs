@@ -16,7 +16,7 @@ public class BreakableObject : MonoBehaviour
     #endregion
 
     // Get Event that is thrown when this object is broken
-    public rho.IGameEvent BreakEvent 
+    public ObjectBrokenEvent BreakEvent 
     {
         get
         {

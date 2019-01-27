@@ -12,11 +12,6 @@ public class ObjectBrokenEvent : IGameEvent
     public AudioClip SoundEffect;
 }
 
-public class StateChangedEvent : IGameEvent
-{
-    public GameStateManager.State State;
-}
-
 // User navigated away from Main Menu
 public class MenuLeftEvent : IGameEvent{}
 

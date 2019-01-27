@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 165073562}
   m_Layer: 0
   m_Name: tony_belluca twinstick
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 1267310060}
   m_Layer: 0
   m_Name: tony_belluca
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

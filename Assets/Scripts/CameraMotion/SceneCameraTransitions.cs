@@ -20,12 +20,22 @@ public class SceneCameraTransitions : MonoBehaviour
     SmoothTransition _smooth;
     LookAtTransform _look;
 
+    ImageFade _fade;
+
     #region Monobehavior
 
     void Awake()
     {
         _smooth = GetComponent<SmoothTransition>();
         _look = GetComponent<LookAtTransform>();
+
+        _fade = GameObject.FindObjectOfType<ImageFade>();
+    }
+
+    void Start()
+    {
+        // SImulate a reset
+        OnLevelResetFinished(null);
     }
 
     void OnEnable()
@@ -82,11 +92,13 @@ public class SceneCameraTransitions : MonoBehaviour
     private void OnLevelResetStart(LevelResetStartEvent evt)
     {
         // Fade to Black
+        _fade.FadeOut();
     }
 
     void OnLevelResetFinished(LevelResetFinishedEvent evt)
     {
         // todo unfade from black
+        _fade.FadeIn();
         _smooth.StartTransition(_menuPosition.position);
         _look.Target = _menuLookTarget;
     }

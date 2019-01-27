@@ -13,19 +13,7 @@ public class SmoothTransition : MonoBehaviour
         StopCoroutine(nameof(Transition));
         StartCoroutine(nameof(Transition), position);
     }
-
-    [SerializeField] Transform[] targets;
-    int _index = 0;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartTransition(targets[_index].position);
-            _index = (_index + 1) % targets.Length;
-        }
-    }
-
+    
     #region Coroutine
 
     IEnumerator _coroutine;

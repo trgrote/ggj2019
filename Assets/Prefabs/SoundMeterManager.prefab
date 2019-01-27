@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1534244184052206405}
   - component: {fileID: 1534244184052206404}
   - component: {fileID: 1534244184052206410}
+  - component: {fileID: 1534244183068249796}
   m_Layer: 0
   m_Name: SoundMeterManager
   m_TagString: Untagged
@@ -57,3 +58,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _depleteRate: 0.2
+--- !u!114 &1534244183068249796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534244184052206407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e6d18174de08492d9e69dc54aa408bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

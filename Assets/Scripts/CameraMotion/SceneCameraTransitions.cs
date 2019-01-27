@@ -28,6 +28,12 @@ public class SceneCameraTransitions : MonoBehaviour
         _look = GetComponent<LookAtTransform>();
     }
 
+    void Start()
+    {
+        // SImulate a reset
+        OnLevelResetFinished(null);
+    }
+
     void OnEnable()
     {
         rho.GlobalEventHandler.Register<MenuLeftEvent>(OnMenuExit);
@@ -81,12 +87,10 @@ public class SceneCameraTransitions : MonoBehaviour
 
     private void OnLevelResetStart(LevelResetStartEvent evt)
     {
-        // Fade to Black
     }
 
     void OnLevelResetFinished(LevelResetFinishedEvent evt)
     {
-        // todo unfade from black
         _smooth.StartTransition(_menuPosition.position);
         _look.Target = _menuLookTarget;
     }

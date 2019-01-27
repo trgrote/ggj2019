@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 7568167582655748714}
   - component: {fileID: 7926316174899419171}
   - component: {fileID: 1999673791681760352}
-  - component: {fileID: 3299545658529649992}
   - component: {fileID: 6838015618170393569}
   m_Layer: 0
   m_Name: tony_belluca
@@ -186,41 +185,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!59 &3299545658529649992
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299545658529649991}
-  m_ConnectedBody: {fileID: 2109607283817649343}
-  m_Anchor: {x: 0, y: 99.99999, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 55.779373, z: 16.79231}
-  m_UseSpring: 1
-  m_Spring:
-    spring: 30
-    damper: 5
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0.5
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!145 &6838015618170393569
 SpringJoint:
   m_ObjectHideFlags: 0
@@ -233,10 +197,10 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 55.779373, z: 16.79231}
   serializedVersion: 2
-  m_Spring: 340.78
-  m_Damper: 92.8
+  m_Spring: 870.12
+  m_Damper: 287.6
   m_MinDistance: 0
-  m_MaxDistance: 0.6
+  m_MaxDistance: 0.1
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity

@@ -212,7 +212,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 2109607283817649343}
   m_Anchor: {x: 0, y: 99.99999, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 55.779373, z: 16.79231}
+  m_ConnectedAnchor: {x: 0, y: 55.77937, z: 16.792309}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 0.2
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 3831112846903772577}
   m_Layer: 0
   m_Name: tony_belluca v2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

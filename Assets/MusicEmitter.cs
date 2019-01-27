@@ -10,7 +10,7 @@ public class MusicEmitter : MonoBehaviour
     [SerializeField] AudioClip menuMusic;
     [SerializeField] AudioClip gameMusic;
     [SerializeField] AudioClip winMusic;
-    [SerializeField] AudioClip loseMusic;
+    [SerializeField] AudioClip lossMusic;
     void Start()
     {
         musicPlayer = GetComponent<AudioSource>();
@@ -52,6 +52,22 @@ public class MusicEmitter : MonoBehaviour
         PlayTonyBellucaMusic();
     }
 
+    void onMeterDepleted(MeterDepletedEvent evt) {
+        PlayLossMusic();
+    }
+    
+    void onMeterFilled(MeterFilledEvent evt) {
+        PlayWinMusic();
+    }
+    
+    void onLevelResetStart(LevelResetStartEvent evt) {
+        PlayMenuMusic();
+    }
+    
+    void onLevelResetFinished(LevelResetFinishedEvent evt) {
+
+    }
+
     private void PlayTonyBellucaMusic()
     {
         musicPlayer.Stop();
@@ -59,25 +75,21 @@ public class MusicEmitter : MonoBehaviour
         musicPlayer.Play();
     }
 
-    void onMeterDepleted(MeterDepletedEvent evt) {
-
-    }
-    
-    void onMeterFilled(MeterFilledEvent evt) {
-
-    }
-    
-    void onLevelResetStart(LevelResetStartEvent evt) {
-
-    }
-    
-    void onLevelResetFinished(LevelResetFinishedEvent evt) {
-
-    }
-
     void PlayMenuMusic() {
         musicPlayer.Stop();
         musicPlayer.clip = menuMusic;
+        musicPlayer.Play();
+    }
+
+    void PlayLossMusic() {
+        musicPlayer.Stop();
+        musicPlayer.clip = lossMusic;
+        musicPlayer.Play();
+    }
+
+    void PlayWinMusic() {
+        musicPlayer.Stop();
+        musicPlayer.clip = winMusic;
         musicPlayer.Play();
     }
     

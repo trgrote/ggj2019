@@ -50,7 +50,7 @@ public class GameStateMachine : MonoBehaviour
     private void OnLevelResetStart(LevelResetStartEvent evt)
     {
         GlobalValues.State = State.Resetting;
-        GlobalValues.SoundValue = 0.5f;
+        GlobalValues.SoundValue = GlobalValues.InitialSoundValue;
     }
 
     void OnLevelResetFinished(LevelResetFinishedEvent evt)

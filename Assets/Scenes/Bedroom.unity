@@ -182,12 +182,12 @@ PrefabInstance:
     - target: {fileID: 1534244184052206404, guid: 122bf168045c5402e8b6cdcf697d3620,
         type: 3}
       propertyPath: soundValueScale
-      value: 0.593
+      value: 0.525
       objectReference: {fileID: 0}
     - target: {fileID: 1534244184052206410, guid: 122bf168045c5402e8b6cdcf697d3620,
         type: 3}
       propertyPath: _depleteRate
-      value: 0.19
+      value: 0.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122bf168045c5402e8b6cdcf697d3620, type: 3}

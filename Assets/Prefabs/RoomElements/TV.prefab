@@ -108,7 +108,7 @@ MonoBehaviour:
   _soundValue: 0.19
   _brokenPrefab: {fileID: 3007814593095483355, guid: 57c9935e147d04a369de97008cb9cea7,
     type: 3}
-  _breakSoundEffect: {fileID: 8300000, guid: 2b4e6cb50687c48bb944424e66d6b06f, type: 3}
+  _breakSoundEffect: {fileID: 8300000, guid: 30c255911d379854abde7c2fbf4bb9fa, type: 3}
 --- !u!1 &3392181521462208495
 GameObject:
   m_ObjectHideFlags: 0

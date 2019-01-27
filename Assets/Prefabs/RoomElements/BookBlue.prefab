@@ -139,4 +139,4 @@ MonoBehaviour:
   _soundValue: 0.5
   _brokenPrefab: {fileID: 5927202074624170828, guid: 1ccee09cc9c084973a9c942715d41905,
     type: 3}
-  _breakSoundEffect: {fileID: 8300000, guid: 2b4e6cb50687c48bb944424e66d6b06f, type: 3}
+  _breakSoundEffect: {fileID: 8300000, guid: 351529d44ce71dd46bbc386b64469220, type: 3}

@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b148949b9c2453782de9b3b5a675bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soundValue: 0
+  _soundValue: 0.19
   _brokenPrefab: {fileID: 3007814593095483355, guid: 57c9935e147d04a369de97008cb9cea7,
     type: 3}
   _breakSoundEffect: {fileID: 8300000, guid: 2b4e6cb50687c48bb944424e66d6b06f, type: 3}

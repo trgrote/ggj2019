@@ -14,7 +14,7 @@ public class MusicEmitter : MonoBehaviour
     void Start()
     {
         musicPlayer = GetComponent<AudioSource>();
-        // PlayMenuMusic();
+        PlayMenuMusic();
     }
 
     void OnEnable()

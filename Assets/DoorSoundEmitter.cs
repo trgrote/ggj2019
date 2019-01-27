@@ -12,9 +12,6 @@ public class DoorSoundEmitter : MonoBehaviour
     void Start()
     {
         audioPlayer = GetComponent<AudioSource>();
-
-        
-        PlayDoorBurst();
     }
 
     // Update is called once per frame

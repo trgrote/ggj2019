@@ -16,3 +16,10 @@ public class StateChangedEvent : IGameEvent
 {
     public GameStateManager.State State;
 }
+
+/// <summary>
+/// Thrown when Tony Belluca enters the room
+/// </summay>
+public class TonyBellucaEnterEvent : IGameEvent
+{
+}

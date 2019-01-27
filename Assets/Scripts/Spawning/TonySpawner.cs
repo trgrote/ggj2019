@@ -37,7 +37,8 @@ public class TonySpawner : MonoBehaviour
 
         if (tony)
         {
-            Destroy(tony);
+            // kill his parent
+            Destroy(tony.transform.parent.gameObject);
         }
     }
 }

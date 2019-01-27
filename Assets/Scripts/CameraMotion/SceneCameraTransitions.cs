@@ -11,14 +11,23 @@ public class SceneCameraTransitions : MonoBehaviour
     [SerializeField] Transform _beforeEnterPosition;
     [SerializeField] Transform _beforeEnterLookTarget;
     [SerializeField] Transform _afterEnterPosition;
-    [SerializeField] Transform _afterEnterLookTarget;
+    Transform _afterEnterLookTarget;
     [SerializeField] Transform _failurePosition;
-    [SerializeField] Transform _failureLookTarget;
+    Transform _failureLookTarget;
     [SerializeField] Transform _victoryPosition;
-    [SerializeField] Transform _victoryLookTarget;
+    Transform _victoryLookTarget;
 
     SmoothTransition _smooth;
     LookAtTransform _look;
+
+    [SerializeField, TagSelector] string PlayerTag;
+    [SerializeField, TagSelector] string BedTag;
+
+    Transform FindTaggedTransform(string tag)
+    {
+        var obj = GameObject.FindGameObjectWithTag(tag);
+        return obj?.transform;
+    }
 
     #region Monobehavior
 
@@ -69,18 +78,24 @@ public class SceneCameraTransitions : MonoBehaviour
 
     void OnTonyBellucaEnter(TonyBellucaEnterEvent evt)
     {
+        _afterEnterLookTarget = FindTaggedTransform(PlayerTag);
+
         _smooth.StartTransition(_afterEnterPosition.position);
         _look.Target = _afterEnterLookTarget;
     }
 
     void OnMeterDepleted(MeterDepletedEvent evt)
     {
+        _failureLookTarget = FindTaggedTransform(BedTag);
+
         _smooth.StartTransition(_failurePosition.position);
         _look.Target = _failureLookTarget;
     }
 
     void OnMeterFilled(MeterFilledEvent evt)
     {
+        _victoryLookTarget = FindTaggedTransform(PlayerTag);
+        
         _smooth.StartTransition(_victoryPosition.position);
         _look.Target = _victoryLookTarget;
     }

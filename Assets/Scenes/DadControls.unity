@@ -1563,8 +1563,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125825427800855087, guid: c4660360a4313dc409c4326a4e7f501f,
         type: 3}
-      propertyPath: transitionToMusicOffsetSeconds
-      value: -0.75
+      propertyPath: gameMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 76e1574f39a2b434ea819e9906af1d53, type: 3}
+    - target: {fileID: 541972240283701238, guid: c4660360a4313dc409c4326a4e7f501f,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.578
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4660360a4313dc409c4326a4e7f501f, type: 3}

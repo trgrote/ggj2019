@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33273fa130e270247a62927f108fc1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 19
+  movementSpeed: 75
   rotationFactor: 0.25
 --- !u!153 &1267310060
 ConfigurableJoint:

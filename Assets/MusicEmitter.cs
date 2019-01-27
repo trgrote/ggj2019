@@ -9,13 +9,12 @@ public class MusicEmitter : MonoBehaviour
     
     [SerializeField] AudioClip menuMusic;
     [SerializeField] AudioClip gameMusic;
-    [SerializeField] AudioClip menuGameTransitionClip;
     [SerializeField] AudioClip winMusic;
     [SerializeField] AudioClip loseMusic;
     void Start()
     {
         musicPlayer = GetComponent<AudioSource>();
-        PlayTonyBellucaMusic();
+        // PlayMenuMusic();
     }
 
     void OnEnable()
@@ -76,7 +75,7 @@ public class MusicEmitter : MonoBehaviour
 
     }
 
-    void StartMenuMusic() {
+    void PlayMenuMusic() {
         musicPlayer.Stop();
         musicPlayer.clip = menuMusic;
         musicPlayer.Play();

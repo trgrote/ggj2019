@@ -27,7 +27,12 @@ public class BreakableObject : MonoBehaviour
     public void Break()
     {
         Destroy(this.gameObject);
-        Instantiate(_brokenPrefab, transform.position, transform.rotation);
+        Instantiate(
+            _brokenPrefab, 
+            transform.position, 
+            transform.rotation,
+            transform.parent
+        );
         rho.GlobalEventHandler.SendEvent(BreakEvent);
     }
 }

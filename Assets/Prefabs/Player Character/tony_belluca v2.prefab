@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2109607283817649343}
   - component: {fileID: 39921058816656750}
   - component: {fileID: 1984804888573587475}
+  - component: {fileID: 1010202497}
   m_Layer: 0
   m_Name: dadbat
   m_TagString: Untagged
@@ -48,7 +49,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 20
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &39921058816656750
 MonoBehaviour:
@@ -74,7 +75,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1e488e413d2f44bb0ef8487153e273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 123.27
+  movementSpeed: 10
+  holder: {fileID: 3299545658529649991}
+  maxDistance: 12.39
+--- !u!114 &1010202497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984804888573587474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f679f128c1cf24eb9a13bca85ead00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToFace: {fileID: 3299545658529649991}
 --- !u!1 &3299545658529649991
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +104,8 @@ GameObject:
   - component: {fileID: 7568167582655748714}
   - component: {fileID: 7926316174899419171}
   - component: {fileID: 1999673791681760352}
-  - component: {fileID: 6838015618170393569}
+  - component: {fileID: 785140652}
+  - component: {fileID: 785140651}
   m_Layer: 0
   m_Name: tony_belluca
   m_TagString: Untagged
@@ -177,7 +194,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3299545658529649991}
   serializedVersion: 2
-  m_Mass: 30
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -185,7 +202,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!145 &6838015618170393569
+--- !u!145 &785140652
 SpringJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,10 +214,10 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 55.779373, z: 16.79231}
   serializedVersion: 2
-  m_Spring: 870.12
-  m_Damper: 287.6
+  m_Spring: 10
+  m_Damper: 0.2
   m_MinDistance: 0
-  m_MaxDistance: 0.1
+  m_MaxDistance: 0
   m_Tolerance: 0.025
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -208,6 +225,19 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &785140651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3299545658529649991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f679f128c1cf24eb9a13bca85ead00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectToFace: {fileID: 1984804888573587474}
 --- !u!1 &5912708123838973858
 GameObject:
   m_ObjectHideFlags: 0

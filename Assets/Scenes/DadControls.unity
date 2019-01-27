@@ -1561,16 +1561,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 125825427800855087, guid: c4660360a4313dc409c4326a4e7f501f,
-        type: 3}
-      propertyPath: gameMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 76e1574f39a2b434ea819e9906af1d53, type: 3}
-    - target: {fileID: 541972240283701238, guid: c4660360a4313dc409c4326a4e7f501f,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.578
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4660360a4313dc409c4326a4e7f501f, type: 3}
 --- !u!1001 &315038517468515946
@@ -1697,16 +1687,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1482525646173014583, guid: 7012db14bf105204598a3f168c17dacf,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1482525646173014583, guid: 7012db14bf105204598a3f168c17dacf,
-        type: 3}
-      propertyPath: Mute
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7012db14bf105204598a3f168c17dacf, type: 3}
 --- !u!1001 &1864784451186635418
@@ -1776,20 +1756,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2535089555873857087, guid: 4308e4a21adf2f14eafa3d5e107befca,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4258051118464350667, guid: 4308e4a21adf2f14eafa3d5e107befca,
-        type: 3}
-      propertyPath: doorSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 21f04ea3b1cb4874aabce132b41b22e4, type: 3}
-    - target: {fileID: 4258051118464350667, guid: 4308e4a21adf2f14eafa3d5e107befca,
-        type: 3}
-      propertyPath: knockSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 8a2426ea53b75cc47a426461177d46c8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4308e4a21adf2f14eafa3d5e107befca, type: 3}

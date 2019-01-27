@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class GameStateMachine : MonoBehaviour
 {
-    public enum State
-    {
-        Menu,
-        WaitingForTony,
-        GameMode,
-        Victory,
-        Failure,
-        Resetting
-    }
-
-    public State _state = State.Menu;
-
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -41,32 +29,32 @@ public class GameStateMachine : MonoBehaviour
 
     void OnMenuExit(MenuLeftEvent evt)
     {
-        _state = State.WaitingForTony;
+        GlobalValues.State = State.WaitingForTony;
     }
 
     void OnTonyBellucaEnter(TonyBellucaEnterEvent evt)
     {
-        _state = State.GameMode;
+        GlobalValues.State = State.GameMode;
     }
 
     void OnMeterDepleted(MeterDepletedEvent evt)
     {
-        _state = State.Failure;
+        GlobalValues.State = State.Failure;
     }
 
     void OnMeterFilled(MeterFilledEvent evt)
     {
-        _state = State.Victory;
+        GlobalValues.State = State.Victory;
     }
 
     private void OnLevelResetStart(LevelResetStartEvent evt)
     {
-        _state = State.Resetting;
+        GlobalValues.State = State.Resetting;
     }
 
     void OnLevelResetFinished(LevelResetFinishedEvent evt)
     {
-        _state = State.Menu;
+        GlobalValues.State = State.Menu;
     }
 
     #endregion

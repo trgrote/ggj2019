@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6737197135458648104}
   - component: {fileID: 6737197135458648103}
+  - component: {fileID: 715302695}
   m_Layer: 0
   m_Name: RoomConfigurationSpawner
   m_TagString: Untagged
@@ -47,3 +48,16 @@ MonoBehaviour:
   - {fileID: 1438302337113114029, guid: 61365051a715f453989bd673c4557b75, type: 3}
   - {fileID: 7849423074231963990, guid: 61581ed96b43a45e8a4f20755a244b15, type: 3}
   - {fileID: 5281097931562031261, guid: b65d58f92226e45f88f9bb4fe5e21a88, type: 3}
+--- !u!114 &715302695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737197135458648105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd0becb92e3e4f01b3c1ed6603d8193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoorTag: Door

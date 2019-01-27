@@ -6,6 +6,7 @@ using UnityEngine;
 public class SoundMeterBreakListener : MonoBehaviour
 {
     #region MonoBehavior
+    [SerializeField] [Range(0.0f, 1.0f)] private float soundValueScale = 1.0f;
 
     void OnEnable()
     {
@@ -22,6 +23,6 @@ public class SoundMeterBreakListener : MonoBehaviour
     void OnObjectBroken(ObjectBrokenEvent evt)
     {
         // Add Value to the Sound Value
-        GlobalValues.SoundValue += evt.SoundAmount;
+        GlobalValues.SoundValue += evt.SoundAmount * soundValueScale;
     }
 }

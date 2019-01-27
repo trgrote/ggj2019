@@ -15,7 +15,7 @@ public enum State
 
 public static class GlobalValues
 {
-    public static float SoundValue = 1f;
+    public static float SoundValue = 0.5f;
 
     public static State State = State.Menu;
 }

@@ -14,7 +14,39 @@ public class RandomDialogEmitter : MonoBehaviour
     {
         lastChosenIndex = -1;
         audioPlayer = GetComponent<AudioSource>();
+    }
+
+    public void StartDialog() {
         StartCoroutine(PlayAudioClips());
+    }
+    
+    public void StopDialog() {
+        StopAllCoroutines();
+    }
+
+        void OnEnable()
+    {
+        rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(onTonyBellucaEnter);
+        rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
+        rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
+    }
+    void OnDisable()
+    {
+        rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(onTonyBellucaEnter);
+        rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
+        rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
+    }
+
+    void onTonyBellucaEnter(TonyBellucaEnterEvent evt)
+    {
+        StartDialog();
+    }
+    void onMeterDepleted(MeterDepletedEvent evt) {
+        StopDialog();
+    }
+    
+    void onMeterFilled(MeterFilledEvent evt) {
+        StopDialog();
     }
 
     // Update is called once per frame

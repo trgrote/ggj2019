@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &125825427800855084
+--- !u!1 &1026619319934678460
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,59 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 125825427800855086}
-  - component: {fileID: 125825427800855087}
-  - component: {fileID: 541972240283701238}
+  - component: {fileID: 8312483466630967280}
+  - component: {fileID: 1284979991723197037}
+  - component: {fileID: 2535089555873857087}
+  - component: {fileID: 4258051118464350667}
   m_Layer: 0
-  m_Name: MusicEmitter
+  m_Name: DoorSoundEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &125825427800855086
+--- !u!4 &8312483466630967280
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125825427800855084}
+  m_GameObject: {fileID: 1026619319934678460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.09037, y: -4.934662, z: 6.758751}
+  m_LocalPosition: {x: -10.84375, y: 4.7611713, z: -0.58057904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &125825427800855087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125825427800855084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f371c957c1dd5c41a6e382a3c65e64f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuMusic: {fileID: 8300000, guid: 3463dd970034bb445a6085f2e5e9e3a2, type: 3}
-  gameMusic: {fileID: 8300000, guid: 76e1574f39a2b434ea819e9906af1d53, type: 3}
-  winMusic: {fileID: 0}
-  loseMusic: {fileID: 0}
---- !u!82 &541972240283701238
+--- !u!82 &1284979991723197037
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125825427800855084}
+  m_GameObject: {fileID: 1026619319934678460}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.578
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -144,3 +129,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!170 &2535089555873857087
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026619319934678460}
+  m_Enabled: 1
+  m_DistortionLevel: 0.5
+--- !u!114 &4258051118464350667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026619319934678460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbb8427c3098c04990c0b1743c50a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorSound: {fileID: 8300000, guid: 21f04ea3b1cb4874aabce132b41b22e4, type: 3}
+  knockSound: {fileID: 8300000, guid: 8a2426ea53b75cc47a426461177d46c8, type: 3}

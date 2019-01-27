@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicEmitter : MonoBehaviour
 {
     
-    private AudioSource audioPlayer;
+    private AudioSource musicPlayer;
     
     [SerializeField] AudioClip menuMusic;
     [SerializeField] AudioClip gameMusic;
@@ -14,7 +14,8 @@ public class MusicEmitter : MonoBehaviour
     [SerializeField] AudioClip loseMusic;
     void Start()
     {
-        audioPlayer = GetComponent<AudioSource>();        
+        musicPlayer = GetComponent<AudioSource>();
+        PlayTonyBellucaMusic();
     }
 
     void OnEnable()
@@ -44,13 +45,21 @@ public class MusicEmitter : MonoBehaviour
     }
     
     void onMenuLeft(MenuLeftEvent evt) {
-
+        return;
     }
     
-    void onTonyBellucaEnter(TonyBellucaEnterEvent evt) {
-
+    void onTonyBellucaEnter(TonyBellucaEnterEvent evt)
+    {
+        PlayTonyBellucaMusic();
     }
-    
+
+    private void PlayTonyBellucaMusic()
+    {
+        musicPlayer.Stop();
+        musicPlayer.clip = gameMusic;
+        musicPlayer.Play();
+    }
+
     void onMeterDepleted(MeterDepletedEvent evt) {
 
     }
@@ -65,6 +74,12 @@ public class MusicEmitter : MonoBehaviour
     
     void onLevelResetFinished(LevelResetFinishedEvent evt) {
 
+    }
+
+    void StartMenuMusic() {
+        musicPlayer.Stop();
+        musicPlayer.clip = menuMusic;
+        musicPlayer.Play();
     }
     
 }

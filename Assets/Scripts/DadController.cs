@@ -13,7 +13,7 @@ public class DadController : MonoBehaviour
   Quaternion weaponHighAngle;
   Quaternion weaponLowAngle;
   [SerializeField] private float mouseRotationFactor = 1.0f;
-  private float rotationAngle = 0.0f;
+  private float rotationAngle = 180.0f;
 
   void Start()
   {
@@ -79,7 +79,7 @@ public class DadController : MonoBehaviour
     }
     else if (Math.Abs(mouseX) > 0.0f)
     {
-      print(mouseX);
+      // print(mouseX);
       rotationAngle += mouseX * mouseRotationFactor;
     };
     ProcessRotationToAngle(rotationAngle);

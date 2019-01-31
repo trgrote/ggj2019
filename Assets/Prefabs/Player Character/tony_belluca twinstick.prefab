@@ -262,6 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 75
   rotationFactor: 0.25
+  mouseRotationFactor: 15
 --- !u!153 &1267310060
 ConfigurableJoint:
   m_ObjectHideFlags: 0

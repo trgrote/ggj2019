@@ -1620,7 +1620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1267310059, guid: 1a3fa49d1b174b740be17adc46a3446d, type: 3}
       propertyPath: mouseRotationFactor
-      value: 4.3
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3fa49d1b174b740be17adc46a3446d, type: 3}

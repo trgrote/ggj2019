@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameStateMachine : MonoBehaviour
 {
+    [SerializeField] Animator _animator;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -29,32 +31,37 @@ public class GameStateMachine : MonoBehaviour
 
     void OnMenuExit(MenuLeftEvent evt)
     {
+        _animator.SetTrigger("Ready");
         GlobalValues.State = State.WaitingForTony;
     }
 
     void OnTonyBellucaEnter(TonyBellucaEnterEvent evt)
     {
+        _animator.SetTrigger("EnterGameMode");
         GlobalValues.State = State.GameMode;
     }
 
     void OnMeterDepleted(MeterDepletedEvent evt)
     {
+        _animator.SetTrigger("Failure");
         GlobalValues.State = State.Failure;
     }
 
     void OnMeterFilled(MeterFilledEvent evt)
     {
+        _animator.SetTrigger("Victory");
         GlobalValues.State = State.Victory;
     }
 
     private void OnLevelResetStart(LevelResetStartEvent evt)
     {
+        _animator.SetTrigger("Reset");
         GlobalValues.State = State.Resetting;
         GlobalValues.SoundValue = GlobalValues.InitialSoundValue;
     }
 
     void OnLevelResetFinished(LevelResetFinishedEvent evt)
-    {
+    {        
         GlobalValues.State = State.Menu;
     }
 

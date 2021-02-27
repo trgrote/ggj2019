@@ -12,20 +12,10 @@ public class BreakSoundPlayer : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    // Start is called before the first frame update
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<ObjectBrokenEvent>(OnObjectBroken);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<ObjectBrokenEvent>(OnObjectBroken);
-    }
-
     // Player a one shot audio clip
-    void OnObjectBroken(ObjectBrokenEvent evt)
+    public void OnObjectBroken(object[] args)
     {
-        _audioSource.PlayOneShot(evt.SoundEffect);
+        var soundEffect = (AudioClip) args[1];
+        _audioSource.PlayOneShot(soundEffect);
     }
 }

@@ -87,6 +87,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -98,6 +100,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -110,6 +113,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5544537896959041838
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -120,9 +124,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 631baffc971f940db829b38d0e4b2a22, type: 3}
 --- !u!114 &2792357479988063710
 MonoBehaviour:
@@ -140,3 +144,4 @@ MonoBehaviour:
   _brokenPrefab: {fileID: 5750992541735771153, guid: 67e1ef2bf835543b4b7818673b8568fa,
     type: 3}
   _breakSoundEffect: {fileID: 8300000, guid: 00aac1c716b88294192251aab93d9070, type: 3}
+  _objectBrokenEvent: {fileID: 11400000, guid: 1da90ddef57f14b43b97bfa4b4288a89, type: 2}

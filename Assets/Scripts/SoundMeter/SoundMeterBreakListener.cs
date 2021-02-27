@@ -8,21 +8,12 @@ public class SoundMeterBreakListener : MonoBehaviour
     #region MonoBehavior
     [SerializeField] [Range(0.0f, 1.0f)] private float soundValueScale = 1.0f;
 
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<ObjectBrokenEvent>(OnObjectBroken);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<ObjectBrokenEvent>(OnObjectBroken);
-    }
-
     #endregion
 
-    void OnObjectBroken(ObjectBrokenEvent evt)
+    public void OnObjectBroken(object[] args)
     {
+        var soundAmount = (float) args[0];
         // Add Value to the Sound Value
-        GlobalValues.SoundValue += evt.SoundAmount * soundValueScale;
+        GlobalValues.SoundValue += soundAmount * soundValueScale;
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6212443469438979192}
   - component: {fileID: 6212443469438979195}
   - component: {fileID: 1988100517237793029}
+  - component: {fileID: 1298196109}
   m_Layer: 0
   m_Name: BreakSoundPlayer
   m_TagString: Untagged
@@ -150,3 +151,31 @@ AudioDistortionFilter:
   m_GameObject: {fileID: 6212443469438979194}
   m_Enabled: 1
   m_DistortionLevel: 0.31
+--- !u!114 &1298196109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212443469438979194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5a2a465af8023499ee45e047c4765c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 1da90ddef57f14b43b97bfa4b4288a89, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6212443469438979195}
+        m_TargetAssemblyTypeName: BreakSoundPlayer, Assembly-CSharp
+        m_MethodName: OnObjectBroken
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

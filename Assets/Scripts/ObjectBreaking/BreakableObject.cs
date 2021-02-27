@@ -13,16 +13,9 @@ public class BreakableObject : MonoBehaviour
 
     [SerializeField] AudioClip _breakSoundEffect;
 
-    #endregion
+    [SerializeField] rho.Event _objectBrokenEvent;
 
-    // Get Event that is thrown when this object is broken
-    public ObjectBrokenEvent BreakEvent 
-    {
-        get
-        {
-            return new ObjectBrokenEvent{SoundAmount = _soundValue, SoundEffect = _breakSoundEffect};
-        }
-    }
+    #endregion
 
     public void Break()
     {
@@ -33,6 +26,7 @@ public class BreakableObject : MonoBehaviour
             transform.rotation,
             transform.parent
         );
-        rho.GlobalEventHandler.SendEvent(BreakEvent);
+
+        _objectBrokenEvent.Raise(_soundValue, _breakSoundEffect);
     }
 }

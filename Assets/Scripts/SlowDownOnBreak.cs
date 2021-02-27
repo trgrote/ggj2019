@@ -11,17 +11,7 @@ public class SlowDownOnBreak : MonoBehaviour
     [Tooltip("How long we should stay in this slow motion, unscaled")]
     [SerializeField] float _slowTimeDuration;
 
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<ObjectBrokenEvent>(OnObjectBroken);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<ObjectBrokenEvent>(OnObjectBroken);
-    }
-
-    private void OnObjectBroken(ObjectBrokenEvent evt)
+    public void OnObjectBroken()
     {
         // Start Slow Coroutine
         StartSlowDown();

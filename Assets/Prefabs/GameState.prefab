@@ -59,7 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b4648dcb4a847fbbf1bbd53a8138d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tonyEnterEvent: {fileID: 11400000, guid: 28c75c43e1019a54cbdbbb4869c6ab1b, type: 2}
   _menuLeftEvent: {fileID: 11400000, guid: ee1686a0af24fa543a5982babcb3be44, type: 2}
+  _resetStartEvent: {fileID: 11400000, guid: 3741720fdcaf5a94c9847cb72f619b69, type: 2}
 --- !u!95 &957795951
 Animator:
   serializedVersion: 3

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using rho;
 
 // When FindAndAssign is called, it will search for the first object it can find with the given tag and 
 // assign the new camera's lookat transform to this tagged gameobject's transform

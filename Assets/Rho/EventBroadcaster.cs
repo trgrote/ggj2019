@@ -6,23 +6,6 @@ using System.Reflection;
 
 namespace rho
 {
-	/// TODO Mode These GameEvent stuff into its own file(s)
-	/// <summary>
-	/// Interface that all GameEvents must implement ... or else!
-	/// </summary>
-	public interface IGameEvent
-	{
-	}
-
-	/// <summary>
-	/// Generic Value changed event
-	/// </summary>
-	public class ValueChangeEvent<T> : IGameEvent
-	{
-		public T oldValue;
-		public T newValue;
-	}
-
 	/// <summary>
 	/// Interface that anyone could implement to be able to handle Events
 	/// </summary>

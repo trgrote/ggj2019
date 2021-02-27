@@ -8,7 +8,7 @@ namespace rho
 {
 	public class SpawnPrefab : MonoBehaviour
 	{
-		[SerializeField] GameObject prefab;
+		[SerializeField] GameObject prefab = null;
 
 		public void Spawn()
 		{

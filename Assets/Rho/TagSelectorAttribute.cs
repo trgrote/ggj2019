@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
  
-public class TagSelectorAttribute : PropertyAttribute
+namespace rho
 {
-    public bool UseDefaultTagFieldDrawer = false;
+    public class TagSelectorAttribute : PropertyAttribute
+    {
+        public bool UseDefaultTagFieldDrawer = false;
+    }
 }

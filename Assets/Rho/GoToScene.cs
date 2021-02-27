@@ -7,7 +7,7 @@ namespace rho
 {
 	public class GoToScene : MonoBehaviour
 	{
-		[SerializeField, Scene] private string sceneName;
+		[SerializeField, Scene] private string sceneName = null;
 
 		public void OnButtonPressed()
 		{

@@ -75,7 +75,7 @@ namespace rho
 
 		// Event Called when the page changes
 		[SerializeField]
-		private PageChangeEvent _pageChange;
+		private PageChangeEvent _pageChange = null;
 
 		//------------------------------------------------------------------------
 		void Start()

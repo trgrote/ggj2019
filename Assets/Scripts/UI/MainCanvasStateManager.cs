@@ -27,7 +27,6 @@ public class MainCanvasStateManager : MonoBehaviour
 
     void OnEnable()
     {
-        rho.GlobalEventHandler.Register<MenuLeftEvent>(OnMenuExit);
         rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(OnTonyBellucaEnter);
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(OnMeterFilled);
@@ -37,7 +36,6 @@ public class MainCanvasStateManager : MonoBehaviour
 
     void OnDisable()
     {
-        rho.GlobalEventHandler.Unregister<MenuLeftEvent>(OnMenuExit);
         rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(OnTonyBellucaEnter);
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(OnMeterFilled);
@@ -49,7 +47,7 @@ public class MainCanvasStateManager : MonoBehaviour
 
     #region Event Handling
 
-    void OnMenuExit(MenuLeftEvent evt)
+    public void OnMenuExit()
     {
         _mainMenuElements.SetActive(false);
         _startInstructions.SetActive(true);

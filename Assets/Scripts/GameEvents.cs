@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using rho;
 
-// User navigated away from Main Menu
-public class MenuLeftEvent : IGameEvent{}
-
 /// <summary>
 /// Thrown when Tony Belluca enters the room
 /// </summay>

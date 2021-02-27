@@ -19,7 +19,6 @@ public class MusicEmitter : MonoBehaviour
 
     void OnEnable()
     {
-        rho.GlobalEventHandler.Register<MenuLeftEvent>(onMenuLeft);
         rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(onTonyBellucaEnter);
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
@@ -29,7 +28,6 @@ public class MusicEmitter : MonoBehaviour
 
     void OnDisable()
     {
-        rho.GlobalEventHandler.Unregister<MenuLeftEvent>(onMenuLeft);
         rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(onTonyBellucaEnter);
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
@@ -42,11 +40,7 @@ public class MusicEmitter : MonoBehaviour
     {
         
     }
-    
-    void onMenuLeft(MenuLeftEvent evt) {
-        return;
-    }
-    
+        
     void onTonyBellucaEnter(TonyBellucaEnterEvent evt)
     {
         PlayTonyBellucaMusic();

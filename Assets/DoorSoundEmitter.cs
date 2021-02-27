@@ -8,6 +8,8 @@ public class DoorSoundEmitter : MonoBehaviour
     
     [SerializeField] AudioClip doorSound;
     [SerializeField] AudioClip knockSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,17 +23,15 @@ public class DoorSoundEmitter : MonoBehaviour
 
     void OnEnable()
     {
-        rho.GlobalEventHandler.Register<MenuLeftEvent>(onMenuLeft); 
         rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(onTonyBellucaEnter); 
     }
 
     void OnDisable()
     {
-        rho.GlobalEventHandler.Unregister<MenuLeftEvent>(onMenuLeft);
         rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(onTonyBellucaEnter);
     }
 
-    void onMenuLeft(MenuLeftEvent evt)
+    public void onMenuLeft()
     {
         StartKnocking();
     }

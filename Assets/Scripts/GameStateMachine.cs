@@ -9,7 +9,6 @@ public class GameStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        rho.GlobalEventHandler.Register<MenuLeftEvent>(OnMenuExit);
         rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(OnTonyBellucaEnter);
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(OnMeterFilled);
@@ -19,7 +18,6 @@ public class GameStateMachine : MonoBehaviour
 
     void OnDisable()
     {
-        rho.GlobalEventHandler.Unregister<MenuLeftEvent>(OnMenuExit);
         rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(OnTonyBellucaEnter);
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(OnMeterFilled);
@@ -29,7 +27,7 @@ public class GameStateMachine : MonoBehaviour
 
     #region Event Handling
 
-    void OnMenuExit(MenuLeftEvent evt)
+    public void OnMenuExit()
     {
         _animator.SetTrigger("Ready");
         GlobalValues.State = State.WaitingForTony;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MenuInputHandler : MonoBehaviour
 {
+    [SerializeField] rho.Event _menuLeftEvent;
+
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +17,7 @@ public class MenuInputHandler : MonoBehaviour
                     rho.GlobalEventHandler.SendEvent(new TonyBellucaEnterEvent());
                     break;
                 case State.Menu:
-                    rho.GlobalEventHandler.SendEvent(new MenuLeftEvent());
+                    _menuLeftEvent.Raise();
                     break;
                 case State.Victory:
                 case State.Failure:

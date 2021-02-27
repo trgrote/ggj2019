@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1284979991723197037}
   - component: {fileID: 2535089555873857087}
   - component: {fileID: 4258051118464350667}
+  - component: {fileID: 1230636571}
   m_Layer: 0
   m_Name: DoorSoundEmitter
   m_TagString: Untagged
@@ -152,3 +153,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorSound: {fileID: 8300000, guid: 21f04ea3b1cb4874aabce132b41b22e4, type: 3}
   knockSound: {fileID: 8300000, guid: 8a2426ea53b75cc47a426461177d46c8, type: 3}
+--- !u!114 &1230636571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026619319934678460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5a2a465af8023499ee45e047c4765c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ee1686a0af24fa543a5982babcb3be44, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4258051118464350667}
+        m_TargetAssemblyTypeName: DoorSoundEmitter, Assembly-CSharp
+        m_MethodName: onMenuLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

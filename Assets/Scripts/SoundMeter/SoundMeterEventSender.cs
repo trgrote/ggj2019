@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class SoundMeterEventSender : MonoBehaviour
 {
+    [SerializeField] rho.Event _meterFilledEvent;
+    [SerializeField] rho.Event _meterDepletedEvent;
+
     void Update()
     {
         if (GlobalValues.SoundValue >= 1.0f)
         {
-            rho.GlobalEventHandler.SendEvent(new MeterFilledEvent());
+            _meterFilledEvent.Raise();
         }
         else if (GlobalValues.SoundValue <= 0 )
         {
-            rho.GlobalEventHandler.SendEvent(new MeterDepletedEvent());
+            _meterDepletedEvent.Raise();
         }
     }
 }

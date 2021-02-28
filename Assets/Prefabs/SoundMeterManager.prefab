@@ -76,6 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6d18174de08492d9e69dc54aa408bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meterFilledEvent: {fileID: 11400000, guid: 257bdd275e7e1a8498ce22220b84e14e, type: 2}
+  _meterDepletedEvent: {fileID: 11400000, guid: 8f8a1ad6b11488043a012d4a7e1a894e,
+    type: 2}
 --- !u!114 &4429754500348196811
 MonoBehaviour:
   m_ObjectHideFlags: 0

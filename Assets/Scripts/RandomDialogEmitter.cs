@@ -24,27 +24,18 @@ public class RandomDialogEmitter : MonoBehaviour
         StopAllCoroutines();
     }
 
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
-        rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
-    }
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
-        rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
-    }
-
     public void onTonyBellucaEnter()
     {
         StartDialog();
     }
 
-    void onMeterDepleted(MeterDepletedEvent evt) {
+    public void onMeterDepleted() 
+    {
         StopDialog();
     }
     
-    void onMeterFilled(MeterFilledEvent evt) {
+    public void onMeterFilled() 
+    {
         StopDialog();
     }
 

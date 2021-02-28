@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1482525646173014581}
   - component: {fileID: 1482525646173014583}
   - component: {fileID: 7447457518218636547}
+  - component: {fileID: 6777477932806705889}
+  - component: {fileID: 4360269465309740526}
   m_Layer: 0
   m_Name: DialogEmitter
   m_TagString: Untagged
@@ -207,6 +209,62 @@ MonoBehaviour:
       - m_Target: {fileID: 1482525646173014581}
         m_TargetAssemblyTypeName: RandomDialogEmitter, Assembly-CSharp
         m_MethodName: onTonyBellucaEnter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6777477932806705889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482525646173014578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5a2a465af8023499ee45e047c4765c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8f8a1ad6b11488043a012d4a7e1a894e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1482525646173014581}
+        m_TargetAssemblyTypeName: RandomDialogEmitter, Assembly-CSharp
+        m_MethodName: onMeterDepleted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4360269465309740526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482525646173014578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5a2a465af8023499ee45e047c4765c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 257bdd275e7e1a8498ce22220b84e14e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1482525646173014581}
+        m_TargetAssemblyTypeName: RandomDialogEmitter, Assembly-CSharp
+        m_MethodName: onMeterFilled
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

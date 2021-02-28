@@ -6,21 +6,6 @@ public class GameStateMachine : MonoBehaviour
 {
     [SerializeField] Animator _animator;
 
-    // Start is called before the first frame update
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<MeterDepletedEvent>(OnMeterDepleted);
-        rho.GlobalEventHandler.Register<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(OnMeterDepleted);
-        rho.GlobalEventHandler.Unregister<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
-
     #region Event Handling
 
     public void OnMenuExit()
@@ -35,13 +20,13 @@ public class GameStateMachine : MonoBehaviour
         GlobalValues.State = State.GameMode;
     }
 
-    void OnMeterDepleted(MeterDepletedEvent evt)
+    public void OnMeterDepleted()
     {
         _animator.SetTrigger("Failure");
         GlobalValues.State = State.Failure;
     }
 
-    void OnMeterFilled(MeterFilledEvent evt)
+    public void OnMeterFilled()
     {
         _animator.SetTrigger("Victory");
         GlobalValues.State = State.Victory;
@@ -54,7 +39,7 @@ public class GameStateMachine : MonoBehaviour
         GlobalValues.SoundValue = GlobalValues.InitialSoundValue;
     }
 
-    void OnLevelResetFinished(LevelResetFinishedEvent evt)
+    public void OnLevelResetFinished()
     {        
         GlobalValues.State = State.Menu;
     }

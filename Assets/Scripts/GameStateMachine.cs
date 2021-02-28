@@ -11,7 +11,6 @@ public class GameStateMachine : MonoBehaviour
     {
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Register<LevelResetStartEvent>(OnLevelResetStart);
         rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
     }
 
@@ -19,7 +18,6 @@ public class GameStateMachine : MonoBehaviour
     {
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Unregister<LevelResetStartEvent>(OnLevelResetStart);
         rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
     }
 
@@ -49,7 +47,7 @@ public class GameStateMachine : MonoBehaviour
         GlobalValues.State = State.Victory;
     }
 
-    private void OnLevelResetStart(LevelResetStartEvent evt)
+    public void OnLevelResetStart()
     {
         _animator.SetTrigger("Reset");
         GlobalValues.State = State.Resetting;

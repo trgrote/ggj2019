@@ -8,6 +8,4 @@ public class MeterDepletedEvent : IGameEvent {}
 
 public class MeterFilledEvent : IGameEvent {}
 
-public class LevelResetStartEvent : IGameEvent {}
-
 public class LevelResetFinishedEvent : IGameEvent {}

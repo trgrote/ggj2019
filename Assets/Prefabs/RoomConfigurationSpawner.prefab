@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6737197135458648103}
   - component: {fileID: 715302695}
   - component: {fileID: 4832515892734951570}
+  - component: {fileID: 964573833}
   m_Layer: 0
   m_Name: RoomConfigurationSpawner
   m_TagString: Untagged
@@ -74,3 +75,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2478558ebc245928be7d30dd6d7742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &964573833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737197135458648105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5a2a465af8023499ee45e047c4765c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 3741720fdcaf5a94c9847cb72f619b69, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4832515892734951570}
+        m_TargetAssemblyTypeName: ResettingDelay, Assembly-CSharp
+        m_MethodName: OnLevelResetStarted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

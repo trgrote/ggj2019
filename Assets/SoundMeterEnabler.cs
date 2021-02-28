@@ -35,7 +35,6 @@ public class SoundMeterEnabler : MonoBehaviour
     {
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
-        rho.GlobalEventHandler.Register<LevelResetStartEvent>(onLevelResetStart);
         rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(onLevelResetFinished);
     }
 
@@ -43,7 +42,6 @@ public class SoundMeterEnabler : MonoBehaviour
     {
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
-        rho.GlobalEventHandler.Unregister<LevelResetStartEvent>(onLevelResetStart);
         rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(onLevelResetFinished);
     }
 
@@ -64,10 +62,6 @@ public class SoundMeterEnabler : MonoBehaviour
     
     void onMeterFilled(MeterFilledEvent evt) {
         DisableAll();
-    }
-    
-    void onLevelResetStart(LevelResetStartEvent evt) {
-
     }
     
     void onLevelResetFinished(LevelResetFinishedEvent evt) {

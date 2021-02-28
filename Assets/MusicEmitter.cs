@@ -21,14 +21,12 @@ public class MusicEmitter : MonoBehaviour
     {
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
-        rho.GlobalEventHandler.Register<LevelResetStartEvent>(onLevelResetStart);
     }
 
     void OnDisable()
     {
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
-        rho.GlobalEventHandler.Unregister<LevelResetStartEvent>(onLevelResetStart);
     }
         
     public void onTonyBellucaEnter()
@@ -44,7 +42,8 @@ public class MusicEmitter : MonoBehaviour
         PlayWinMusic();
     }
     
-    void onLevelResetStart(LevelResetStartEvent evt) {
+    public void onLevelResetStart() 
+    {
         PlayMenuMusic();
     }
 

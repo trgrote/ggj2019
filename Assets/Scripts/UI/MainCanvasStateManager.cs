@@ -29,7 +29,6 @@ public class MainCanvasStateManager : MonoBehaviour
     {
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Register<LevelResetStartEvent>(OnLevelResetStart);
         rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
     }
 
@@ -37,7 +36,6 @@ public class MainCanvasStateManager : MonoBehaviour
     {
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(OnMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Unregister<LevelResetStartEvent>(OnLevelResetStart);
         rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
     }
 
@@ -81,7 +79,7 @@ public class MainCanvasStateManager : MonoBehaviour
         _victoryElements.SetActive(true);
     }
 
-    private void OnLevelResetStart(LevelResetStartEvent evt)
+    public void OnLevelResetStart()
     {
         _mainMenuElements.SetActive(false);
         _startInstructions.SetActive(false);

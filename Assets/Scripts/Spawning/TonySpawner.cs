@@ -15,21 +15,12 @@ public class TonySpawner : MonoBehaviour
         Instantiate(prefab, transform.position, transform.rotation);
     }
 
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
     public void OnTonyBellucaEnter()
     {
         Spawn();
     }
 
-    private void OnLevelResetFinished(LevelResetFinishedEvent evt)
+    public void OnLevelResetFinished()
     {
         // Unspawn tony
         var tony = GameObject.FindGameObjectWithTag(PlayerTag);

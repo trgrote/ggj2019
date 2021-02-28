@@ -21,16 +21,6 @@ public class DoorSoundEmitter : MonoBehaviour
     {
     }
 
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(onTonyBellucaEnter); 
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(onTonyBellucaEnter);
-    }
-
     public void onMenuLeft()
     {
         StartKnocking();
@@ -43,7 +33,7 @@ public class DoorSoundEmitter : MonoBehaviour
         audioPlayer.Play();
     }
 
-    void onTonyBellucaEnter(TonyBellucaEnterEvent evt)
+    public void onTonyBellucaEnter()
     {
         PlayDoorBurst();
     }

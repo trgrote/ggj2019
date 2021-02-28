@@ -4,11 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using rho;
 
-/// <summary>
-/// Thrown when Tony Belluca enters the room
-/// </summay>
-public class TonyBellucaEnterEvent : IGameEvent {}
-
 public class MeterDepletedEvent : IGameEvent {}
 
 public class MeterFilledEvent : IGameEvent {}

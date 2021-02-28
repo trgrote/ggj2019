@@ -17,16 +17,14 @@ public class TonySpawner : MonoBehaviour
 
     void OnEnable()
     {
-        rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(OnTonyBellucaEnter);
         rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
     }
 
     void OnDisable()
     {
-        rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(OnTonyBellucaEnter);
         rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
     }
-    private void OnTonyBellucaEnter(TonyBellucaEnterEvent evt)
+    public void OnTonyBellucaEnter()
     {
         Spawn();
     }

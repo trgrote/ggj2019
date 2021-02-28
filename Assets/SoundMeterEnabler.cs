@@ -33,7 +33,6 @@ public class SoundMeterEnabler : MonoBehaviour
 
     void OnEnable()
     {
-        rho.GlobalEventHandler.Register<TonyBellucaEnterEvent>(onTonyBellucaEnter);
         rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
         rho.GlobalEventHandler.Register<LevelResetStartEvent>(onLevelResetStart);
@@ -42,7 +41,6 @@ public class SoundMeterEnabler : MonoBehaviour
 
     void OnDisable()
     {
-        rho.GlobalEventHandler.Unregister<TonyBellucaEnterEvent>(onTonyBellucaEnter);
         rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
         rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
         rho.GlobalEventHandler.Unregister<LevelResetStartEvent>(onLevelResetStart);
@@ -55,7 +53,8 @@ public class SoundMeterEnabler : MonoBehaviour
         
     }
     
-    void onTonyBellucaEnter(TonyBellucaEnterEvent evt) {
+    public void onTonyBellucaEnter() 
+    {
         EnableAll();
     }
 

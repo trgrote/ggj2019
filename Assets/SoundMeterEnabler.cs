@@ -30,41 +30,19 @@ public class SoundMeterEnabler : MonoBehaviour
         soundMeterDepleter.enabled = true;
         soundMeterEventSender.enabled = true;
     }
-
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
-        rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
-        rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(onLevelResetFinished);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
-        rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
-        rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(onLevelResetFinished);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void onTonyBellucaEnter() 
     {
         EnableAll();
     }
 
-    void onMeterDepleted(MeterDepletedEvent evt) {
+    public void onMeterDepleted() 
+    {
         DisableAll();
     }
     
-    void onMeterFilled(MeterFilledEvent evt) {
+    public void onMeterFilled() 
+    {
         DisableAll();
-    }
-    
-    void onLevelResetFinished(LevelResetFinishedEvent evt) {
-
     }
 }

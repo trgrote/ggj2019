@@ -16,29 +16,19 @@ public class MusicEmitter : MonoBehaviour
         musicPlayer = GetComponent<AudioSource>();
         PlayMenuMusic();
     }
-
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<MeterDepletedEvent>(onMeterDepleted);
-        rho.GlobalEventHandler.Register<MeterFilledEvent>(onMeterFilled);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(onMeterDepleted);
-        rho.GlobalEventHandler.Unregister<MeterFilledEvent>(onMeterFilled);
-    }
         
     public void onTonyBellucaEnter()
     {
         PlayTonyBellucaMusic();
     }
 
-    void onMeterDepleted(MeterDepletedEvent evt) {
+    public void onMeterDepleted() 
+    {
         PlayLossMusic();
     }
     
-    void onMeterFilled(MeterFilledEvent evt) {
+    public void onMeterFilled() 
+    {
         PlayWinMusic();
     }
     

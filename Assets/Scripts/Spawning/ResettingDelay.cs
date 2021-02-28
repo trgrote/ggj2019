@@ -6,6 +6,8 @@ using UnityEngine;
 // When Reset happens, wait a bit before finishing the reset
 public class ResettingDelay : MonoBehaviour
 {   
+    [SerializeField] rho.Event _levelResetFinishedEvent;
+
     public void OnLevelResetStarted()
     {
         StartCoroutine(nameof(DelayTillReset));
@@ -14,6 +16,6 @@ public class ResettingDelay : MonoBehaviour
     IEnumerator DelayTillReset()
     {
         yield return new WaitForSeconds(0.5f);
-        rho.GlobalEventHandler.SendEvent(new LevelResetFinishedEvent());
+        _levelResetFinishedEvent.Raise();
     }
 }

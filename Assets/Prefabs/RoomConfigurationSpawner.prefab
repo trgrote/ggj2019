@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2478558ebc245928be7d30dd6d7742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelResetFinishedEvent: {fileID: 11400000, guid: 624fba343a2695a45b0bbd67b0aa6d0f,
+    type: 2}
 --- !u!114 &964573833
 MonoBehaviour:
   m_ObjectHideFlags: 0

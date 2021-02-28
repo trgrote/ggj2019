@@ -19,17 +19,7 @@ public class ResetDoor : MonoBehaviour
         _initialiRotation = rb.rotation;
     }
 
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
-
-    private void OnLevelResetFinished(LevelResetFinishedEvent evt)
+    public void OnLevelResetFinished()
     {
         var door = GameObject.FindGameObjectWithTag(DoorTag);
         var rb = door.GetComponent<Rigidbody>();

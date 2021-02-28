@@ -22,21 +22,7 @@ public class MainCanvasStateManager : MonoBehaviour
     void Start()
     {
         // SImulate a reset
-        OnLevelResetFinished(null);
-    }
-
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<MeterDepletedEvent>(OnMeterDepleted);
-        rho.GlobalEventHandler.Register<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<MeterDepletedEvent>(OnMeterDepleted);
-        rho.GlobalEventHandler.Unregister<MeterFilledEvent>(OnMeterFilled);
-        rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
+        OnLevelResetFinished();
     }
 
     #endregion
@@ -61,7 +47,7 @@ public class MainCanvasStateManager : MonoBehaviour
         _victoryElements.SetActive(false);
     }
 
-    void OnMeterDepleted(MeterDepletedEvent evt)
+    public void OnMeterDepleted()
     {
         _mainMenuElements.SetActive(false);
         _startInstructions.SetActive(false);
@@ -70,7 +56,7 @@ public class MainCanvasStateManager : MonoBehaviour
         _victoryElements.SetActive(false);
     }
 
-    void OnMeterFilled(MeterFilledEvent evt)
+    public void OnMeterFilled()
     {
         _mainMenuElements.SetActive(false);
         _startInstructions.SetActive(false);
@@ -91,7 +77,7 @@ public class MainCanvasStateManager : MonoBehaviour
         _fade.FadeOut();
     }
 
-    void OnLevelResetFinished(LevelResetFinishedEvent evt)
+    public void OnLevelResetFinished()
     {
         // unfade from black
         _fade.FadeIn();

@@ -12,17 +12,7 @@ public class RoomConfigurationSpawner : MonoBehaviour
     void Start()
     {
         // SImulate a reset
-        OnLevelResetFinished(null);
-    }
-
-    void OnEnable()
-    {
-        rho.GlobalEventHandler.Register<LevelResetFinishedEvent>(OnLevelResetFinished);
-    }
-
-    void OnDisable()
-    {
-        rho.GlobalEventHandler.Unregister<LevelResetFinishedEvent>(OnLevelResetFinished);
+        OnLevelResetFinished();
     }
 
     int _prevIndex = -1;
@@ -37,7 +27,7 @@ public class RoomConfigurationSpawner : MonoBehaviour
         return _roomConfigurations[_prevIndex];
     }
 
-    void OnLevelResetFinished(LevelResetFinishedEvent evt)
+    public void OnLevelResetFinished()
     {
         if (_currentRoom != null)
         {

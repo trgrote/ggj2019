@@ -14,6 +14,10 @@ namespace rho
     {
         protected List<T> _items = new List<T>();
 
+        public delegate void RuntimeSetEventHandler(RuntimeSet<T> sender);
+
+        public event RuntimeSetEventHandler SetChanged = delegate {};
+
         public virtual int Count => ((ICollection<T>)_items).Count;
 
         public virtual bool IsReadOnly => ((ICollection<T>)_items).IsReadOnly;
@@ -21,11 +25,13 @@ namespace rho
         public virtual void Add(T item)
         {
             ((ICollection<T>)_items).Add(item);
+            SetChanged(this);
         }
 
         public virtual void Clear()
         {
             ((ICollection<T>)_items).Clear();
+            SetChanged(this);
         }
 
         public virtual bool Contains(T item)
@@ -36,6 +42,7 @@ namespace rho
         public virtual void CopyTo(T[] array, int arrayIndex)
         {
             ((ICollection<T>)_items).CopyTo(array, arrayIndex);
+            SetChanged(this);
         }
 
         public virtual IEnumerator<T> GetEnumerator()
@@ -45,7 +52,9 @@ namespace rho
 
         public virtual bool Remove(T item)
         {
-            return ((ICollection<T>)_items).Remove(item);
+            var rval =  ((ICollection<T>)_items).Remove(item);
+            SetChanged(this);
+            return rval;
         }
 
         IEnumerator IEnumerable.GetEnumerator()
